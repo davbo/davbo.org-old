@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>{% block title %}davblog{% endblock %}</title>
+        <link href='http://fonts.googleapis.com/css?family=Molengo' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="/static/reset-fonts-grids.css">
+        <link rel="stylesheet" type="text/css" href="/static/davbo.css">
+        <link href="{{ url_for('recent_feed') }}"
+              rel="alternate"
+              title="Recent Posts" 
+              type="application/atom+xml">
+    </head>
+    <body>
+        <div id="hd">
+            <h1><a href="/">davb<span class="quiet">l</span>o<span class="quiet">g</span></a></h1>
+        </div>
+        <div id="bd">
+            {% block body %}{% endblock %}
+        </div>
+        <div id="ft">
+        </div>
+    </body>
+</html>
