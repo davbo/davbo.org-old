@@ -8,6 +8,12 @@ from werkzeug.contrib.atom import AtomFeed
 
 
 app = Flask(__name__)
+app.config.update(
+    SQLALCHEMY_DATABASE_URI = 'sqlite:////tmp/davbo.db',
+    SQLALCHEMY_ECHO = False,
+    DEBUG = True,
+    SECRET_KEY = 'dfghgq8$#3443jkT#$TsgdlsLSDvsdv',
+)
 db = SQLAlchemy(app)
 
 
@@ -110,10 +116,4 @@ def recent_feed():
     return feed.get_response()
 
 if __name__ == '__main__':
-    app.config.update(
-        SQLALCHEMY_DATABASE_URI = 'sqlite:///davbo.db',
-        SQLALCHEMY_ECHO = False,
-        DEBUG = True,
-        SECRET_KEY = 'dfghgq8$#3443jkT#$TsgdlsLSDvsdv',
-    )
     app.run()
