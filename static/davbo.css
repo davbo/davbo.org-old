@@ -8,8 +8,10 @@ body {
     text-align: left;
 }
 a {color:#58b0ff;text-decoration:none;}
-h1 {
+#hd {
     font-family: 'Molengo', arial, sans-serif;
+}
+#hd h1 {
     font-size: 36pt;
 }
 #hd a {color:rgba(155,155,155,1);text-decoration:none;}
@@ -22,6 +24,19 @@ h2 {
 p {
     margin-top: 5px;
     margin-bottom: 5px;
+}
+#hd li a {
+    color:rgba(155,155,155,0.5);
+}
+#hd li {
+    color:rgba(155,155,155,0.4);
+    list-style-type: circle;
+    list-style-position: inside;
+}
+#hd li:hover {
+    color:rgba(155,155,155,1);
+    list-style-type: disc;
+    list-style-position: inside;
 }
 #bd {
     margin-top: 120px;
